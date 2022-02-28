@@ -4,11 +4,11 @@ const router = express.Router();
 const animeController = require('../controllers/animeController')
 
 // api/anime
-router.post('/', animeController.crearAnime);
-router.get('/', animeController.recibirAnimes);
-router.put('/:id', animeController.actualizarAnime);
-router.get('/:id', animeController.recibirAnime);
-router.delete('/:id', animeController.eliminarAnime);
+router.post('/addAnime', animeController.crearAnime);
+router.get('/animes', animeController.recibirAnimes);
+router.put('/updateAnime/:id', animeController.actualizarAnime);
+router.get('/animes/:id', animeController.recibirAnime);
+router.delete('/deleteAnime/:id', animeController.eliminarAnime);
 
 
 module.exports = router;
